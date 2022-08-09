@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casuality Console</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="medkit"></ion-icon>
+                        </span>
+                        <span class="title">Casuality</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home"></ion-icon>
+                        </span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="person-add"></ion-icon>
+                        </span>
+                        <span class="title">New Patient</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="people"></ion-icon>
+                        </span>
+                        <span class="title">All Patients</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="help"></ion-icon>
+                        </span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="settings"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="reload-circle"></ion-icon>
+                        </span>
+                        <span class="title">Reload</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu"></ion-icon>
+                </div>
+
+                <form action="">
+                    <input type="search" required>
+                    <i class="fa fa-search"></i>
+                </form>
+
+                <div class="user">
+                    <ion-icon name="person-circle"></ion-icon>
+
+                </div>
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">105</div>
+                        <div class="cardName">Total Patients</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="man"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">21</div>
+                        <div class="cardName">Admitted Patients</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="thermometer-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">84</div>
+                        <div class="cardName">Un Admitted Patients</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="thermometer"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">Discharge</div>
+                        <div class="cardName">Discharge Patients</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="walk"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ================ Admitted Patients ================= -->
+            <div class="details">
+                <div class="admittedPatients">
+                    <div class="cardHeader">
+                        <h2>Admitted Patients</h2>
+                        <div class="filter">
+                            <input type="date" value="2017-06-01">
+                            <select id="choice">
+                                <option value="all">All</option>
+                                <option value="serviceOne">Medical Record Number</option>
+                                <option value="serviceTwo">Doctor</option>
+                                <option value="serviceThree">staff</option>
+
+                                <option value="serviceFour">Patient Name</option>
+                                <option value="serviceFive">Status</option>
+                            </select>
+                        </div>
+                    </div>
+                    <table class="table-sortable">
+                        <thead>
+                            <tr>
+                                <th>Medical Record Number</th>
+                                <th>Admitted Since</th>
+                                <th>Name</th>
+                                <th>Gender</th>
+                                <th>Appoinment Time</th>
+                                <th>Bed number</th>
+                                <th>status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>02/02/2022</td>
+                                <td>Amit</td>
+                                <td>Male</td>
+                                <td>0.00pm</td>
+                                <td>01</td>
+                                <td><span class="minimal">minimal</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>002</td>
+                                <td>02/02/2022</td>
+                                <td>David</td>
+                                <td>Male</td>
+                                <td>0.00pm</td>
+                                <td>02</td>
+                                <td><span class="expectant">Expectant</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>003</td>
+                                <td>06/02/2022</td>
+                                <td>Vishnu</td>
+                                <td>Male</td>
+                                <td>0.00pm</td>
+                                <td>03</td>
+                                <td><span class="delayed">Delayed</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>004</td>
+                                <td>06/02/2022</td>
+                                <td>Nancy</td>
+                                <td>Female</td>
+                                <td>0.00pm</td>
+                                <td>04</td>
+                                <td><span class="minimal">minimal</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>005</td>
+                                <td>10/02/2022</td>
+                                <td>Arun</td>
+                                <td>Male</td>
+                                <td>0.00pm</td>
+                                <td>05</td>
+                                <td><span class="immediate">Immideiate</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>006</td>
+                                <td>13/02/2022</td>
+                                <td>Sruthi</td>
+                                <td>Female</td>
+                                <td>0.00pm</td>
+                                <td>06</td>
+                                <td><span class="delayed">Delayed</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>007</td>
+                                <td>18/02/2022</td>
+                                <td>Praveen</td>
+                                <td>Male</td>
+                                <td>0.00pm</td>
+                                <td>07</td>
+                                <td><span class="minimal">minimal</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>008</td>
+                                <td>24/02/2022</td>
+                                <td>Jacob</td>
+                                <td>Male</td>
+                                <td>0.00pm</td>
+                                <td>08</td>
+                                <td><span class="immediate">Immideiate</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>009</td>
+                                <td>03/03/2022</td>
+                                <td>Asish</td>
+                                <td>Male</td>
+                                <td>0.00pm</td>
+                                <td>09</td>
+                                <td><span class="minimal">minimal</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>010</td>
+                                <td>08/03/2022</td>
+                                <td>Anu</td>
+                                <td>Female</td>
+                                <td>0.00pm</td>
+                                <td>10</td>
+                                <td><span class="delayed">Delayed</span></td>
+                            </tr>
+                            <tr>
+                                <td>011</td>
+                                <td>12/02/2022</td>
+                                <td>Michael</td>
+                                <td>Male</td>
+                                <td>0.00pm</td>
+                                <td>11</td>
+                                <td><span class="expectant">Expectant</span></td>
+                            </tr>
+                            <tr>
+                                <td>012</td>
+                                <td>19/03/2022</td>
+                                <td>Bilal</td>
+                                <td>Male</td>
+                                <td>0.00pm</td>
+                                <td>12</td>
+                                <td><span class="immediate">Immideiate</span></td>
+                            </tr>
+                            <tr>
+                                <td>013</td>
+                                <td>25/03/2022</td>
+                                <td>Nandagopal</td>
+                                <td>Male</td>
+                                <td>0.00pm</td>
+                                <td>13</td>
+                                <td><span class="minimal">minimal</span></td>
+                            </tr>
+                            <tr>
+                                <td>014</td>
+                                <td>03/04/2022</td>
+                                <td>Sagar</td>
+                                <td>Male</td>
+                                <td>0.00pm</td>
+                                <td>14</td>
+                                <td><span class="immediate">Immideiate</span></td>
+                            </tr>
+                            <tr>
+                                <td>015</td>
+                                <td>10/04/2022</td>
+                                <td>George</td>
+                                <td>Male</td>
+                                <td>0.00pm</td>
+                                <td>15</td>
+                                <td><span class="minimal">minimal</span></td>
+                            </tr>
+                            <tr>
+                                <td>016</td>
+                                <td>14/04/2022</td>
+                                <td>Ayisha</td>
+                                <td>Female</td>
+                                <td>0.00pm</td>
+                                <td>16</td>
+                                <td><span class="delayed">Delayed</span></td>
+                            </tr>
+                            <tr>
+                                <td>017</td>
+                                <td>16/04/2022</td>
+                                <td>Celin</td>
+                                <td>Female</td>
+                                <td>0.00pm</td>
+                                <td>17</td>
+                                <td><span class="delayed">Delayed</span></td>
+                            </tr>
+                            <tr>
+                                <td>018</td>
+                                <td>20/04/2022</td>
+                                <td>Mary</td>
+                                <td>Female</td>
+                                <td>0.00pm</td>
+                                <td>18</td>
+                                <td><span class="minimal">minimal</span></td>
+                            </tr>
+                            <tr>
+                                <td>019</td>
+                                <td>23/04/2022</td>
+                                <td>Tina</td>
+                                <td>Female</td>
+                                <td>0.00pm</td>
+                                <td>19</td>
+                                <td><span class="immediate">Immideiate</span></td>
+                            </tr>
+                            <tr>
+                                <td>020</td>
+                                <td>24/04/2022</td>
+                                <td>Vikram</td>
+                                <td>Male</td>
+                                <td>0.00pm</td>
+                                <td>20</td>
+                                <td><span class="expectant">Expectant</span></td>
+                            </tr>
+                            <tr>
+                                <td>021</td>
+                                <td>28/04/2022</td>
+                                <td>Kasi</td>
+                                <td>Male</td>
+                                <td>0.00pm</td>
+                                <td>21</td>
+                                <td><span class="delayed">Delayed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <script src="assets/js/tablesort.js"></script>
+                </div>
+
+                <!-- ================= Un Admitted Patients ================ -->
+                <div class="unAdmittedPatients">
+
+                    <form action="">
+                        <input type="search" required>
+                        <i class="fa fa-search"></i>
+                    </form>
+
+                    <div class="cardHeader">
+                        <h2>Un Admitted Patients</h2>
+                    </div>
+
+                    <table>
+                        <tr>
+                            <td width="60px">
+                                <ion-icon name="person-sharp"></ion-icon>
+                            </td>
+                            <td>
+                                <h4>Surya <br> <span>MR No.0001</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <ion-icon name="person-sharp"></ion-icon>
+                            </td>
+                            <td>
+                                <h4>Vijay <br> <span>MR No.0002</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <ion-icon name="person-sharp"></ion-icon>
+                            </td>
+                            <td>
+                                <h4>Pranav<br> <span>MR No.0003</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <ion-icon name="person-sharp"></ion-icon>
+                            </td>
+                            <td>
+                                <h4>Nitheesh<br> <span>MR No.0004</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <ion-icon name="person-sharp"></ion-icon>
+                            </td>
+                            <td>
+                                <h4>Sreepriya<br> <span>MR No.0005</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <ion-icon name="person-sharp"></ion-icon>
+                            </td>
+                            <td>
+                                <h4>Reshma<br> <span>MR No.0006</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <ion-icon name="person-sharp"></ion-icon>
+                            </td>
+                            <td>
+                                <h4>Akhil<br> <span>MR No.0007</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <ion-icon name="person-sharp"></ion-icon>
+                            </td>
+                            <td>
+                                <h4>Akash<br> <span>MR No.0008</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <ion-icon name="person-sharp"></ion-icon>
+                            </td>
+                            <td>
+                                <h4>Sajin<br> <span>MR No.0009</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <ion-icon name="person-sharp"></ion-icon>
+                            </td>
+                            <td>
+                                <h4>Mithra<br> <span>MR No.0010</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <ion-icon name="person-sharp"></ion-icon>
+                            </td>
+                            <td>
+                                <h4>Sreethu<br> <span>MR No.0011</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <ion-icon name="person-sharp"></ion-icon>
+                            </td>
+                            <td>
+                                <h4>Tony<br> <span>MR No.0012</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <ion-icon name="person-sharp"></ion-icon>
+                            </td>
+                            <td>
+                                <h4>Avinash<br> <span>MR No.0013</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <ion-icon name="person-sharp"></ion-icon>
+                            </td>
+                            <td>
+                                <h4>Andrews<br> <span>MR No.0014</span></h4>
+                            </td>
+                        </tr>
+
+
+
+
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
